@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Open Graph (카카오톡 미리보기) -->
+  <meta property="og:title" content="원제우 세무사 | 원제우세무사사무소">
+  <meta property="og:description" content="법인세·소득세·부가가치세·상속·증여·양도소득세 | 부천 소향로 135 | 032-321-4521">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://taxmancall.com/card">
+  <meta property="og:image" content="https://taxmancall.com/card-preview.png">
+  <title>원제우 세무사 | 원제우세무사사무소</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@400;600;700&family=Noto+Sans+KR:wght@300;400;500&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --navy:   #0B2A4A;
+      --navy2:  #12376B;
+      --gold:   #C8A96E;
+      --gold-lt:#E2C98A;
+      --cream:  #F7F4EF;
+      --ink:    #1A1A2E;
+      --muted:  #6B7A8D;
+      --white:  #FFFFFF;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      background: var(--cream);
+      font-family: 'Noto Sans KR', sans-serif;
+      color: var(--ink);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    /* ─── HERO CARD ─────────────────────────────────────── */
+    .hero {
+      width: 100%;
+      max-width: 480px;
+      background: linear-gradient(150deg, var(--navy2) 0%, var(--navy) 60%);
+      padding: 48px 36px 40px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    /* 배경 워터마크 원 */
+    .hero::before {
+      content: '';
+      position: absolute;
+      width: 280px; height: 280px;
+      border-radius: 50%;
+      border: 1px solid rgba(200,169,110,0.18);
+      top: -60px; right: -60px;
+    }
+    .hero::after {
+      content: '';
+      position: absolute;
+      width: 180px; height: 180px;
+      border-radius: 50%;
+      border: 1px solid rgba(200,169,110,0.12);
+      bottom: -40px; left: -40px;
+    }
+
+    .logo-row {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 28px;
+    }
+
+    .logo-icon {
+      width: 38px; height: 38px;
+      flex-shrink: 0;
+    }
+
+    .logo-text {
+      font-family: 'Noto Serif KR', serif;
+      font-size: 17px;
+      font-weight: 700;
+      color: var(--white);
+      letter-spacing: -0.3px;
+      line-height: 1.3;
+    }
+
+    .divider-gold {
+      width: 32px; height: 2px;
+      background: var(--gold);
+      margin-bottom: 20px;
+    }
+
+    .name-block { margin-bottom: 6px; }
+
+    .name-ko {
+      font-family: 'Noto Serif KR', serif;
+      font-size: 36px;
+      font-weight: 700;
+      color: var(--white);
+      letter-spacing: 6px;
+      line-height: 1;
+    }
+
+    .title-row {
+      font-size: 12px;
+      color: var(--gold-lt);
+      letter-spacing: 1px;
+      margin-top: 8px;
+      font-weight: 300;
+    }
+
+    /* ─── CONTACT BUTTONS ───────────────────────────────── */
+    .contact-wrap {
+      width: 100%;
+      max-width: 480px;
+      background: var(--navy);
+      padding: 20px 36px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .btn-contact {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      background: rgba(255,255,255,0.06);
+      border: 1px solid rgba(200,169,110,0.25);
+      border-radius: 8px;
+      padding: 13px 18px;
+      color: var(--white);
+      text-decoration: none;
+      font-size: 14px;
+      font-weight: 400;
+      transition: background 0.2s, border-color 0.2s;
+    }
+    .btn-contact:hover {
+      background: rgba(200,169,110,0.15);
+      border-color: var(--gold);
+    }
+
+    .btn-icon {
+      width: 20px; height: 20px;
+      flex-shrink: 0;
+      opacity: 0.85;
+    }
+
+    .btn-label {
+      font-size: 10px;
+      color: var(--gold-lt);
+      letter-spacing: 0.5px;
+      display: block;
+      margin-bottom: 1px;
+    }
+
+    /* ─── SERVICES SECTION ──────────────────────────────── */
+    .section {
+      width: 100%;
+      max-width: 480px;
+      padding: 36px 36px;
+      background: var(--white);
+    }
+
+    .section-eyebrow {
+      font-size: 10px;
+      letter-spacing: 2px;
+      color: var(--gold);
+      font-weight: 500;
+      margin-bottom: 16px;
+      text-transform: uppercase;
+    }
+
+    .service-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px;
+    }
+
+    .service-chip {
+      background: var(--cream);
+      border-left: 2px solid var(--gold);
+      padding: 10px 14px;
+      font-size: 13px;
+      color: var(--navy);
+      font-weight: 500;
+      line-height: 1.4;
+    }
+
+    /* ─── PROFILE SECTION ───────────────────────────────── */
+    .section-dark {
+      width: 100%;
+      max-width: 480px;
+      padding: 36px 36px;
+      background: var(--cream);
+    }
+
+    .profile-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    .profile-list li {
+      font-size: 13px;
+      color: var(--ink);
+      padding-left: 16px;
+      position: relative;
+      line-height: 1.5;
+    }
+
+    .profile-list li::before {
+      content: '';
+      position: absolute;
+      left: 0; top: 8px;
+      width: 5px; height: 1px;
+      background: var(--gold);
+    }
+
+    /* ─── ADDRESS FOOTER ─────────────────────────────────── */
+    .footer {
+      width: 100%;
+      max-width: 480px;
+      padding: 28px 36px 48px;
+      background: var(--navy);
+    }
+
+    .footer-address {
+      font-size: 12px;
+      color: rgba(255,255,255,0.55);
+      line-height: 2;
+    }
+
+    .footer-address strong {
+      color: var(--gold-lt);
+      font-weight: 500;
+    }
+
+    .services-label {
+      margin-top: 18px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+    }
+
+    .tag {
+      font-size: 10px;
+      padding: 3px 9px;
+      border: 1px solid rgba(200,169,110,0.3);
+      color: var(--gold-lt);
+      border-radius: 20px;
+      letter-spacing: 0.3px;
+    }
+
+  </style>
+</head>
+<body>
+
+  <!-- HERO -->
+  <div class="hero">
+    <div class="logo-row">
+      <!-- 세무사 로고 SVG (방패형 심볼) -->
+      <svg class="logo-icon" viewBox="0 0 38 38" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="19" cy="19" r="18" stroke="#C8A96E" stroke-width="1.2"/>
+        <path d="M19 7 L30 13 L30 22 C30 27.5 25 31.5 19 33 C13 31.5 8 27.5 8 22 L8 13 Z" fill="none" stroke="#C8A96E" stroke-width="1.2"/>
+        <text x="19" y="23" text-anchor="middle" font-size="10" fill="#C8A96E" font-family="serif" font-weight="700">稅</text>
+      </svg>
+      <div class="logo-text">원제우세무사 사무소</div>
+    </div>
+
+    <div class="divider-gold"></div>
+
+    <div class="name-block">
+      <div class="name-ko">원 제 우</div>
+      <div class="title-row">대표 세무사 · 경영지도사</div>
+    </div>
+  </div>
+
+  <!-- CONTACT -->
+  <div class="contact-wrap">
+    <a href="tel:032-321-4521" class="btn-contact">
+      <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="#C8A96E" stroke-width="1.8" stroke-linecap="round">
+        <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.89 11 19.79 19.79 0 01.82 2.38 2 2 0 012.8.18h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.91 7.91a16 16 0 006.16 6.16l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/>
+      </svg>
+      <div>
+        <span class="btn-label">사무소 전화</span>
+        032-321-4521
+      </div>
+    </a>
+
+    <a href="tel:010-3489-4567" class="btn-contact">
+      <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="#C8A96E" stroke-width="1.8" stroke-linecap="round">
+        <rect x="5" y="2" width="14" height="20" rx="2" ry="2"/>
+        <line x1="12" y1="18" x2="12.01" y2="18"/>
+      </svg>
+      <div>
+        <span class="btn-label">휴대전화</span>
+        010-3489-4567
+      </div>
+    </a>
+
+    <a href="mailto:taxmancall@gmail.com" class="btn-contact">
+      <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="#C8A96E" stroke-width="1.8" stroke-linecap="round">
+        <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+        <polyline points="22,6 12,13 2,6"/>
+      </svg>
+      <div>
+        <span class="btn-label">이메일</span>
+        taxmancall@gmail.com
+      </div>
+    </a>
+
+    <a href="https://taxmancall.com" target="_blank" class="btn-contact">
+      <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="#C8A96E" stroke-width="1.8" stroke-linecap="round">
+        <circle cx="12" cy="12" r="10"/>
+        <line x1="2" y1="12" x2="22" y2="12"/>
+        <path d="M12 2a15.3 15.3 0 014 10 15.3 15.3 0 01-4 10 15.3 15.3 0 01-4-10 15.3 15.3 0 014-10z"/>
+      </svg>
+      <div>
+        <span class="btn-label">홈페이지</span>
+        taxmancall.com
+      </div>
+    </a>
+  </div>
+
+  <!-- SERVICES -->
+  <div class="section">
+    <div class="section-eyebrow">주요 업무</div>
+    <div class="service-grid">
+      <div class="service-chip">법인세 · 소득세<br>부가가치세</div>
+      <div class="service-chip">상속 · 증여<br>양도소득세</div>
+      <div class="service-chip">기장대리<br>세무조정</div>
+      <div class="service-chip">조세불복<br>청구</div>
+      <div class="service-chip">법인설립<br>사업자등록</div>
+      <div class="service-chip">기업경영<br>컨설팅</div>
+    </div>
+  </div>
+
+  <!-- PROFILE -->
+  <div class="section-dark">
+    <div class="section-eyebrow">주요 약력</div>
+    <ul class="profile-list">
+      <li>현) 부천시 세무 상담위원</li>
+      <li>현) 남부천세무서 세무위원</li>
+      <li>전) 인천지방세무사회 법인세·소득세 감리위원</li>
+      <li>전) 중소기업 비즈니스지원단 자문위원</li>
+      <li>전) 대림그룹 에이플러스디(주) 자문</li>
+    </ul>
+  </div>
+
+  <!-- FOOTER -->
+  <div class="footer">
+    <div class="footer-address">
+      <strong>원제우세무사 사무소</strong><br>
+      부천시 소향로 135, 3층 (중동, 부일빌딩)<br>
+      Tel 032-321-4521 · Fax 02-6280-4521
+    </div>
+    <div class="services-label">
+      <span class="tag">기장대리</span>
+      <span class="tag">세무조정</span>
+      <span class="tag">신고대행</span>
+      <span class="tag">법인전환</span>
+      <span class="tag">아웃소싱</span>
+    </div>
+  </div>
+
+</body>
+</html>
